@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.B.C.P - Simple but Clever Products</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #6ee7b7 0%, #fcd34d 50%, #a78bfa 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            margin-top: 40px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 220px;
+            border-radius: 12px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.2em;
+            color: #22223b;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4a4e69;
+            margin-bottom: 2em;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .product-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+        .product-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #22223b;
+        }
+        .product-desc {
+            font-size: 0.97rem;
+            color: #4a4e69;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.1rem;
+            color: #38b000;
+            font-weight: bold;
+        }
+        /* Contact Form Styles */
+        .contact-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+        }
+        .contact-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #22223b;
+            margin-bottom: 18px;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #bdbdbd;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .contact-form textarea {
+            min-height: 80px;
+        }
+        .contact-form button {
+            background: #38b000;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #008000;
+        }
+        /* Social Links */
+        .social-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 10px;
+        }
+        .social-links a {
+            color: #22223b;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #38b000;
+        }
+        @media (max-width: 700px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                padding: 20px 5px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <img src="logo.jpg" alt="S.B.C.P Logo" class="logo">
+    <h1>S.B.C.P</h1>
+    <div class="subtitle">Simple but clever products</div>
+<!--    <div class="products">-->
+<!--        &lt;!&ndash; Product 1 &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <img src="https://placehold.co/100x100?text=Product+1" alt="Product 1" class="product-img">-->
+<!--            <div class="product-title">Clever Phone Stand</div>-->
+<!--            <div class="product-desc">A foldable, pocket-sized stand for your phone or tablet. Simple, sturdy, and always handy.</div>-->
+<!--            <div class="product-price">$9.99</div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Product 2 &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <img src="https://placehold.co/100x100?text=Product+2" alt="Product 2" class="product-img">-->
+<!--            <div class="product-title">Magnetic Cable Organizer</div>-->
+<!--            <div class="product-desc">Keep your cables neat and tangle-free with this magnetic organizer. No more messy desks!</div>-->
+<!--            <div class="product-price">$7.49</div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Product 3 &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <img src="https://placehold.co/100x100?text=Product+3" alt="Product 3" class="product-img">-->
+<!--            <div class="product-title">Multi-tool Keychain</div>-->
+<!--            <div class="product-desc">A compact keychain with screwdriver, bottle opener, and more. Always be prepared!</div>-->
+<!--            <div class="product-price">$12.99</div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Add more products as needed &ndash;&gt;-->
+<!--    </div>-->
+
+    <!-- Contact Form Section -->
+    <div class="contact-section">
+        <div class="contact-title">Contact Us</div>
+        <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div style="text-align:center; font-size:0.95em; color:#888; margin-top:8px;">
+            Or email us directly: <a href="mailto:your@email.com">your@email.com</a>
+        </div>
+    </div>
+
+    <!-- Social Links Section -->
+    <div class="social-section">
+        <div style="font-size:1.1rem; color:#22223b;">Follow us:</div>
+        <div class="social-links">
+            <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
